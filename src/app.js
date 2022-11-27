@@ -7,7 +7,7 @@ export default function Character(name, type) {
   Character.prototype.damage = (points) => {
     let damages = `${this.health -= points * (1 - this.defence / 100)}`;
     if (this.health < 0) {
-      damages = this.health;
+      damages = 0;
       this.health = 0;
     }
     return damages;
